@@ -50,7 +50,10 @@ class _SignupScreenState extends State<SignupScreen> {
           // "createdAt": FieldValue.serverTimestamp(),
         });
         SharedPreferences prefs = await SharedPreferences.getInstance();
-        await prefs.setString('phoneNumber', updatedNumber);
+        await prefs.setString('phoneNumber', phoneNumber);
+        await prefs.setString('userName', fullName);
+        await prefs.setString('email', email);
+
         showAlert("User registered successfully!", isRegistered: true);
       }
       // checkAndAddUser;

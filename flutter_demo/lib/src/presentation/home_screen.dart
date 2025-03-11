@@ -246,7 +246,9 @@ class HomeScreenContent extends StatelessWidget {
               }
             } else {
               return Center(
-                child: CircularProgressIndicator(),
+                child: CircularProgressIndicator(
+                  color: ColorPalette.primaryColor,
+                ),
               );
             }
           }),
